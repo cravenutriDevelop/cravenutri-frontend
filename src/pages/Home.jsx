@@ -17,7 +17,7 @@ const Home = () => {
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "https://cravenutri.com/" },
-          { name: "Collection", url: "https://cravenutri.com/" }
+          // { name: "Collection", url: "https://cravenutri.com/" }
         ]}
       />
 

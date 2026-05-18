@@ -16,7 +16,7 @@ const Contact = () => {
 <BreadcrumbSchema
         items={[
           { name: "Home", url: "https://cravenutri.com/" },
-          { name: "About", url: "https://cravenutri.com/contact" }
+          { name: "Contact", url: "https://cravenutri.com/contact" }
         ]}
       />
 
@@ -30,6 +30,7 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
+          <h1 className="sr-only">Contact CraveNutri – Customer Support</h1>
           <Title text1={"CONTACT"} text2={"US"} />
           <p className="text-gray-500 mt-3">
             We would love to hear from you. Reach out to us anytime.

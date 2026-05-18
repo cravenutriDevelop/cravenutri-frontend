@@ -66,13 +66,14 @@ const Team = () => {
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "https://cravenutri.com/" },
-          { name: "About", url: "https://cravenutri.com/team" }
+          { name: "Team", url: "https://cravenutri.com/team" }
         ]}
       />
       <div className="min-h-screen bg-[#FFFBF7] py-16 px-6 md:px-12">
 
         {/* Header */}
         <div className="text-center mb-16">
+            <h1 className="sr-only">Our Team – CraveNutri</h1>
           <Title text1={"OUR"} text2={"TEAM"} />
           <p className="text-gray-500 mt-4 max-w-xl mx-auto">
             Meet the passionate people building CraveNutri — a brand committed to

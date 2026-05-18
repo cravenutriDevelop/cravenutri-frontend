@@ -6,6 +6,7 @@ import { ShopContext } from "../contexts/ShopContext";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const PlaceOrder = () => {
   // const [method, setMethod] = useState("cod");
@@ -208,9 +209,17 @@ const PlaceOrder = () => {
 
   return (
     <>
-      <Helmet>
+      <SEO
+        title="Place Order | CraveNutri"
+        description="Complete your purchase securely. Review address and payment method."
+        url="https://cravenutri.com/place-order"
+        image="https://cravenutri.com/og-order.jpg"
+        noindex={true}
+      />
+      {/* <Helmet>
         <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+      </Helmet> */}
+      
       <motion.form
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

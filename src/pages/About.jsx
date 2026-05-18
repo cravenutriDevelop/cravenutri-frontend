@@ -34,6 +34,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
+            <h1 className="sr-only">About CraveNutri – Healthy Nutrition Brand</h1>
           <Title text1={"ABOUT"} text2={"CRAVENUTRI"} />
           <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
             Building a healthier future through premium nutrition, trusted

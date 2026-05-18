@@ -12,6 +12,7 @@ import {
 import { CheckCircleIcon as CheckCircleSolid } from "@heroicons/react/solid";
 import axios from "axios";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const Orders = () => {
   const { currency, backendUrl, token } = useContext(ShopContext);
@@ -166,9 +167,16 @@ const Orders = () => {
 
   return (
     <>
-      <Helmet>
+      <SEO
+        title="My Orders | CraveNutri"
+        description="View your order history, track shipments, and manage returns for CraveNutri products."
+        url="https://cravenutri.com/orders"
+        image="https://cravenutri.com/orders-og-image.jpg"
+        noindex={true}
+      />
+      {/* <Helmet>
         <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+      </Helmet> */}
 
       <div className="border-t pt-16 px-4 sm:px-8 lg:px-12 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 min-h-screen">
         <style>{`
@@ -323,8 +331,8 @@ const Orders = () => {
                       </span>
                       <span
                         className={`ml-2 px-2 py-0.5 rounded-full text-xs font-medium ${order.paymentStatus === "paid"
-                            ? "bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-700"
-                            : "bg-gradient-to-r from-amber-100 to-orange-100 text-amber-700"
+                          ? "bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-700"
+                          : "bg-gradient-to-r from-amber-100 to-orange-100 text-amber-700"
                           }`}
                       >
                         {order.paymentStatus}
@@ -411,8 +419,8 @@ const Orders = () => {
                             <div className="relative flex flex-col items-center">
                               <div
                                 className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg ${isCompleted
-                                    ? "bg-gradient-to-br from-emerald-400 to-green-500 text-white group-hover:scale-110"
-                                    : "bg-gradient-to-br from-gray-200 to-gray-300 text-gray-500"
+                                  ? "bg-gradient-to-br from-emerald-400 to-green-500 text-white group-hover:scale-110"
+                                  : "bg-gradient-to-br from-gray-200 to-gray-300 text-gray-500"
                                   }`}
                               >
                                 {isCompleted ? (
@@ -424,8 +432,8 @@ const Orders = () => {
                               {index < steps.length - 1 && (
                                 <div
                                   className={`w-0.5 h-8 mt-1 transition-all duration-500 ${index < currentIndex
-                                      ? "bg-gradient-to-b from-emerald-300 to-green-300"
-                                      : "bg-gradient-to-b from-gray-200 to-gray-300"
+                                    ? "bg-gradient-to-b from-emerald-300 to-green-300"
+                                    : "bg-gradient-to-b from-gray-200 to-gray-300"
                                     }`}
                                 ></div>
                               )}

@@ -78,7 +78,8 @@ const TermsOfService = () => {
         <div className="max-w-4xl mx-auto">
 
           <div className="flex justify-center mb-12">
-            <Title text1={"Refund"} text2={"Policy"} />
+            <h1 className="sr-only">Terms of Service – CraveNutri</h1>
+            <Title text1={"Terms of"} text2={"Service"} />
           </div>
 
           <p className="text-gray-600 text-center mb-12">

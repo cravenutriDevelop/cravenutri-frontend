@@ -1,5 +1,6 @@
 import Title from "../components/Title";
 import SEO from "../components/SEO";
+import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 const RefundPolicy = () => {
   return (
@@ -10,12 +11,21 @@ const RefundPolicy = () => {
         url="https://cravenutri.com/refund-policy"
         image="https://cravenutri.com/cravenutriicon.png"
       />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://cravenutri.com/" },
+          { name: "Refund Policy", url: "https://cravenutri.com/refund-policy" }
+        ]}
+      />
+
       <div className="bg-[#FFFBF7] min-h-screen">
         <div className="max-w-6xl mx-auto px-6 py-16">
 
           {/* Heading */}
           <div className="flex justify-center mb-12">
+            <h1 className="sr-only">Refund Policy – CraveNutri</h1>
             <Title text1={"Refund"} text2={"Policy"} />
+
           </div>
 
           {/* Intro */}

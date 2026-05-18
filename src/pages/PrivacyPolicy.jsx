@@ -15,6 +15,7 @@ const PrivacyPolicy = () => {
 
           {/* Heading */}
           <div className="flex justify-center mb-12">
+              <h1 className="sr-only">Privacy Policy – CraveNutri</h1>
             <Title text1={"Privacy"} text2={"Policy"} />
           </div>
 

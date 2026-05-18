@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { ShopContext } from "../contexts/ShopContext";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -60,9 +61,16 @@ const OTPLogin = () => {
 
   return (
     <>
-      <Helmet>
+    <SEO
+  title="Login | CraveNutri"
+  description="Login or sign up using your mobile number to place orders and track history."
+  url="https://cravenutri.com/login"
+  image="https://cravenutri.com/og-login.jpg"
+  noindex={true}
+/>
+      {/* <Helmet>
         <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+      </Helmet> */}
 
       <div className="min-h-screen flex flex-col bg-[#FFFBF7]">
 

@@ -49,7 +49,7 @@ const FAQ = () => {
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "https://cravenutri.com/" },
-          { name: "About", url: "https://cravenutri.com/faq" }
+          { name: "FAQ", url: "https://cravenutri.com/faq" }
         ]}
       />
       <div className="bg-[#FFFBF7] min-h-screen">
@@ -57,6 +57,8 @@ const FAQ = () => {
 
           {/* Heading */}
           <div className="flex justify-center mb-12">
+              <h1 className="sr-only">Frequently Asked Questions – CraveNutri</h1>
+
             <Title text1={"Frequently"} text2={"Asked Questions"} />
           </div>
 

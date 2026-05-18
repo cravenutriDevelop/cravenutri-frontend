@@ -5,6 +5,7 @@ import Title from "../components/Title";
 import { assets } from "../assets/frontend_assets/assets";
 import CartTotal from "../components/CartTotal";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const Cart = () => {
   const { products, currency, cartItems, updateQuantity, navigate, loading } =
@@ -85,9 +86,17 @@ const Cart = () => {
 
   return (
     <>
-    <Helmet>
-  <meta name="robots" content="noindex, nofollow" />
-</Helmet>
+    <SEO
+        title="Your Shopping Cart | CraveNutri"
+        description="Review your items, update quantities, and proceed to checkout at CraveNutri – healthy snacks delivered to your doorstep."
+        url="https://cravenutri.com/cart"
+         image="https://cravenutri.com/cravenutriicon.png"  // default banner image
+        noindex={true}
+      />
+      {/* Extra robots noindex ke liye Helmet add kar do */}
+      {/* <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet> */}
 
     <div className="border-t pt-14 px-4 sm:px-10 animate-fadeIn">
       <motion.div

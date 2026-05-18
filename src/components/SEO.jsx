@@ -5,6 +5,7 @@ const SEO = ({
   description,
   url,
   image,
+  noindex = false
 }) => {
   return (
     <Helmet>
@@ -12,15 +13,14 @@ const SEO = ({
       <title>{title}</title>
 
       <meta name="description" content={description} />
-
+        {/* Dynamic robots - only one meta */}
+      <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
       <meta
         name="keywords"
         content="healthy snacks, nutrition snacks, protein snacks, Crave Nutri, wellness foods"
       />
 
       <meta name="author" content="Crave Nutri" />
-
-      <meta name="robots" content="index, follow" />
 
       {/* Canonical */}
       <link rel="canonical" href={url} />
