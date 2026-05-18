@@ -4,6 +4,7 @@ import { ShopContext } from "../contexts/ShopContext";
 import Title from "../components/Title";
 import { assets } from "../assets/frontend_assets/assets";
 import CartTotal from "../components/CartTotal";
+import { Helmet } from "react-helmet-async";
 
 const Cart = () => {
   const { products, currency, cartItems, updateQuantity, navigate, loading } =
@@ -71,7 +72,7 @@ const Cart = () => {
           className="w-40 mx-auto mb-6 opacity-50"
         />
         <h2 className="text-2xl font-semibold text-gray-700 mb-2">Your cart is empty</h2>
-        <p className="text-gray-500 mb-8">Looks like you haven't added anything yet.</p>
+        <p className="text-gray-500 mb-8">Looks like you haven&apos;t added anything yet.</p>
         <button
           onClick={() => navigate("/collection")}
           className="px-8 py-3 bg-emerald-600 text-white rounded-xl hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
@@ -83,6 +84,11 @@ const Cart = () => {
   }
 
   return (
+    <>
+    <Helmet>
+  <meta name="robots" content="noindex, nofollow" />
+</Helmet>
+
     <div className="border-t pt-14 px-4 sm:px-10 animate-fadeIn">
       <motion.div
         initial={{ opacity: 0, x: -20 }}
@@ -199,6 +205,7 @@ const Cart = () => {
         </motion.div>
       </div>
     </div>
+    </>
   );
 };
 

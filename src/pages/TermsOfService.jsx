@@ -1,11 +1,7 @@
-import React, { useEffect } from "react";
 import Title from "../components/Title";
+import SEO from "../components/SEO";
 
 const TermsOfService = () => {
-
-  useEffect(() => {
-    document.title = "Terms of Service | CraveNutri";
-  }, []);
 
   const sections = [
     {
@@ -71,52 +67,60 @@ const TermsOfService = () => {
   ];
 
   return (
-    <div className="bg-[#FFFBF7] min-h-screen py-12 px-6">
-      <div className="max-w-4xl mx-auto">
+    <>
+      <SEO
+        title="Terms of Service | CraveNutri"
+        description="Read the terms and conditions for using CraveNutri services, website, and products."
+        url="https://cravenutri.com/terms-of-service"
+        image="https://cravenutri.com/cravenutriicon.png"
+      />
+      <div className="bg-[#FFFBF7] min-h-screen py-12 px-6">
+        <div className="max-w-4xl mx-auto">
 
-      <div className="flex justify-center mb-12">
-          <Title text1={"Refund"} text2={"Policy"} />
-        </div>
+          <div className="flex justify-center mb-12">
+            <Title text1={"Refund"} text2={"Policy"} />
+          </div>
 
-        <p className="text-gray-600 text-center mb-12">
-          These Terms of Service govern your use of the CraveNutri website and
-          the purchase of our products. By accessing this site, you agree to
-          these terms.
-        </p>
-
-        <div className="space-y-8">
-          {sections.map((section, index) => (
-            <section key={index}>
-              <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                {section.title}
-              </h2>
-              <p className="text-gray-600 leading-relaxed">
-                {section.text}
-              </p>
-            </section>
-          ))}
-        </div>
-
-        <div className="mt-14 border-t pt-8">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-800">
-            Contact Information
-          </h2>
-
-          <p className="text-gray-600 mb-4">
-            If you have any questions regarding these Terms of Service,
-            please contact us:
+          <p className="text-gray-600 text-center mb-12">
+            These Terms of Service govern your use of the CraveNutri website and
+            the purchase of our products. By accessing this site, you agree to
+            these terms.
           </p>
 
-          <div className="text-gray-600 space-y-1">
-            <p><strong>Company:</strong> CraveNutri</p>
-            <p><strong>Email:</strong> support@cravenutri.com</p>
-            <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
-            <p><strong>Address:</strong> India</p>
+          <div className="space-y-8">
+            {sections.map((section, index) => (
+              <section key={index}>
+                <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                  {section.title}
+                </h2>
+                <p className="text-gray-600 leading-relaxed">
+                  {section.text}
+                </p>
+              </section>
+            ))}
           </div>
-        </div>
 
+          <div className="mt-14 border-t pt-8">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">
+              Contact Information
+            </h2>
+
+            <p className="text-gray-600 mb-4">
+              If you have any questions regarding these Terms of Service,
+              please contact us:
+            </p>
+
+            <div className="text-gray-600 space-y-1">
+              <p><strong>Company:</strong> CraveNutri</p>
+              <p><strong>Email:</strong> support@cravenutri.com</p>
+              <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+              <p><strong>Address:</strong> India</p>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -4,10 +4,42 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/cravenutriicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cravenutri</title>
+
+    <!-- Default Title & Description (overridden by React Helmet on each route) -->
+    <title>CraveNutri – Healthy Snacks & Max Nutrition Foods</title>
+    <meta name="description" content="Discover CraveNutri – your source for healthy snacks and max nutrition foods. Shop natural, delicious products online." />
+
+    <!-- Google Search Console Verification (replace YOUR_CODE) -->
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+
+    <!-- Google Analytics (gtag) – replace G-XXXXXXXXXX -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Canonical URL (global fallback, but per‑page is better) -->
+    <link rel="canonical" href="https://www.cravenutri.com/" />
+
+    <!-- Open Graph (default) -->
+    <meta property="og:title" content="CraveNutri" />
+    <meta property="og:description" content="Healthy Snacks & Max Nutrition Foods" />
+    <meta property="og:image" content="https://www.cravenutri.com/og-image.jpg" />
+    <meta property="og:url" content="https://www.cravenutri.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CraveNutri" />
+    <meta name="twitter:description" content="Healthy Snacks & Max Nutrition Foods" />
+    <meta name="twitter:image" content="https://www.cravenutri.com/twitter-image.jpg" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>  </body>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </body>
 </html>

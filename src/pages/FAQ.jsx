@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Title from "../components/Title";
+import SEO from "../components/SEO";
 
 const faqs = [
   {
@@ -37,57 +38,65 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-[#FFFBF7] min-h-screen">
-      <div className="max-w-6xl mx-auto px-6 py-16">
+    <>
+      <SEO
+        title="FAQ | CraveNutri Help & Support"
+        description="Find answers to frequently asked questions about CraveNutri products, orders, delivery, and policies."
+        url="https://cravenutri.com/faq"
+        image="https://cravenutri.com/cravenutriicon.png"
+      />
+      <div className="bg-[#FFFBF7] min-h-screen">
+        <div className="max-w-6xl mx-auto px-6 py-16">
 
-        {/* Heading */}
-        <div className="flex justify-center mb-12">
-          <Title text1={"Frequently"} text2={"Asked Questions"} />
-        </div>
+          {/* Heading */}
+          <div className="flex justify-center mb-12">
+            <Title text1={"Frequently"} text2={"Asked Questions"} />
+          </div>
 
-        {/* FAQ List */}
-        <div className="space-y-4">
+          {/* FAQ List */}
+          <div className="space-y-4">
 
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white border rounded-xl shadow-sm overflow-hidden"
-            >
-
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full text-left px-6 py-5 flex justify-between items-center hover:bg-gray-50 transition"
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-white border rounded-xl shadow-sm overflow-hidden"
               >
-                <span className="font-semibold text-gray-800">
-                  {faq.question}
-                </span>
 
-                <span className="text-xl text-gray-500">
-                  {openIndex === index ? "-" : "+"}
-                </span>
-              </button>
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full text-left px-6 py-5 flex justify-between items-center hover:bg-gray-50 transition"
+                >
+                  <span className="font-semibold text-gray-800">
+                    {faq.question}
+                  </span>
 
-              {openIndex === index && (
-                <div className="px-6 pb-5 text-gray-600">
-                  {faq.answer}
-                </div>
-              )}
+                  <span className="text-xl text-gray-500">
+                    {openIndex === index ? "-" : "+"}
+                  </span>
+                </button>
 
-            </div>
-          ))}
+                {openIndex === index && (
+                  <div className="px-6 pb-5 text-gray-600">
+                    {faq.answer}
+                  </div>
+                )}
+
+              </div>
+            ))}
+
+          </div>
+
+          {/* Bottom Contact */}
+          <div className="text-center mt-12 text-gray-500 text-sm">
+            Still have questions? Contact us at{" "}
+            <span className="font-medium text-gray-800">
+              official@cravenutri.com
+            </span>
+          </div>
 
         </div>
-
-        {/* Bottom Contact */}
-        <div className="text-center mt-12 text-gray-500 text-sm">
-          Still have questions? Contact us at{" "}
-          <span className="font-medium text-gray-800">
-            official@cravenutri.com
-          </span>
-        </div>
-
       </div>
-    </div>
+    </>
   );
 };
 

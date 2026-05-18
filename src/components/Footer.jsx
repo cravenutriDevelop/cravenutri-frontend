@@ -8,7 +8,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import logo from "../assets/frontend_assets/logo.png";
+import logo from "../assets/frontend_assets/logo-dark.png";
 
 const Footer = () => {
 
@@ -40,7 +40,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-950 text-gray-400 border-t border-gray-800">
+    <footer className="bg-black text-gray-400 border-t border-gray-800">
 
       <div className="max-w-7xl mx-auto px-6 py-12">
 

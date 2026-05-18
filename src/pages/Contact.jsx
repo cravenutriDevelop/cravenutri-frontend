@@ -1,10 +1,18 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Building } from "lucide-react";
 import Title from "../components/Title";
+import SEO from "../components/SEO";
 
 const Contact = () => {
   return (
+  <>
+<SEO
+  title="Contact CraveNutri | Customer Support & Help"
+  description="Get in touch with CraveNutri for support, product queries, partnerships, or customer assistance."
+  url="https://cravenutri.com/contact"
+  image="https://cravenutri.com/cravenutriicon.png"
+/>
+
     <div className="min-h-screen bg-[#FFFBF7] py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
 
@@ -99,6 +107,7 @@ const Contact = () => {
         </motion.p>
       </div>
     </div>
+      </>
   );
 };
 

@@ -1,8 +1,16 @@
-import React from "react";
 import Title from "../components/Title";
+import SEO from "../components/SEO";
 
 const ShippingPolicy = () => {
   return (
+    <>
+<SEO
+  title="Shipping Policy | CraveNutri"
+  description="Learn about CraveNutri shipping timelines, delivery process, and order tracking information."
+  url="https://cravenutri.com/shipping-policy"
+  image="https://cravenutri.com/cravenutriicon.png"
+/>
+   
     <div className="bg-[#FFFBF7] min-h-screen">
       <div className="max-w-6xl mx-auto px-6 py-16">
 
@@ -79,6 +87,7 @@ const ShippingPolicy = () => {
 
       </div>
     </div>
+     </>
   );
 };
 

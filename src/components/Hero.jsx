@@ -98,9 +98,9 @@ const Hero = () => {
             {slides[current].category}
           </p>
 
-          <h1 className="text-4xl sm:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
+          <h2 className="text-4xl sm:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
             {slides[current].title}
-          </h1>
+          </h2>
 
           <p className="max-w-xl text-gray-200 mb-6 text-sm sm:text-base drop-shadow">
             {slides[current].desc}
