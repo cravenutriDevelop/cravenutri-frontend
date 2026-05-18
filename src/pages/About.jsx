@@ -3,6 +3,7 @@ import Title from "../components/Title";
 import { Users, Package, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -17,6 +18,12 @@ const About = () => {
         description="Learn about CraveNutri, our mission, healthy nutrition products, and commitment to wellness and quality."
         url="https://cravenutri.com/about"
         image="https://cravenutri.com/cravenutriicon.png"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://cravenutri.com/" },
+          { name: "About", url: "https://cravenutri.com/about" }
+        ]}
       />
       <div className="bg-[#FFFBF7] min-h-screen overflow-hidden py-16 px-6 md:px-12">
 

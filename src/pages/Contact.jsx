@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Building } from "lucide-react";
 import Title from "../components/Title";
 import SEO from "../components/SEO";
+import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 const Contact = () => {
   return (
@@ -12,6 +13,12 @@ const Contact = () => {
   url="https://cravenutri.com/contact"
   image="https://cravenutri.com/cravenutriicon.png"
 />
+<BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://cravenutri.com/" },
+          { name: "About", url: "https://cravenutri.com/contact" }
+        ]}
+      />
 
     <div className="min-h-screen bg-[#FFFBF7] py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">

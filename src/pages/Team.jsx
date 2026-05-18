@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Title from "../components/Title";
 import { Instagram, Linkedin, Twitter, Mail } from "lucide-react";
 import SEO from "../components/SEO";
+import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 const teamMembers = [
   {
@@ -61,6 +62,12 @@ const Team = () => {
         description="Meet the passionate team behind CraveNutri and our mission to deliver healthy nutrition products."
         url="https://cravenutri.com/team"
         image="https://cravenutri.com/cravenutriicon.png"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://cravenutri.com/" },
+          { name: "About", url: "https://cravenutri.com/team" }
+        ]}
       />
       <div className="min-h-screen bg-[#FFFBF7] py-16 px-6 md:px-12">
 

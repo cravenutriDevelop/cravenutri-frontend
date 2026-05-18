@@ -3,6 +3,7 @@ import LatestCollection from "../components/LatestCollection";
 import AnnouncementBar from "../components/AnnouncementBar";
 import CraveNutriInfo from "../components/CraveNutriInfo";
 import SEO from "../components/SEO";
+import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 const Home = () => {
   return (
@@ -12,6 +13,12 @@ const Home = () => {
         description="Discover premium healthy snacks and wellness products at Crave Nutri. Explore products designed for fitness, immunity, and overall well-being."
         url="https://cravenutri.com/"
         image="https://cravenutri.com/cravenutriicon.png"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://cravenutri.com/" },
+          { name: "Collection", url: "https://cravenutri.com/" }
+        ]}
       />
 
       <div>

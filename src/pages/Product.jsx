@@ -6,6 +6,7 @@ import { ShopContext } from "../contexts/ShopContext";
 import RelatedProducts from "../components/RelatedProducts";
 import axios from "axios";
 import SEO from "../components/SEO";
+import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 const Product = () => {
   const { productId } = useParams();
@@ -100,6 +101,14 @@ const Product = () => {
         url={`https://cravenutri.com/product/${productId}`}
         image={mainImage}
       />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://cravenutri.com/" },
+          { name: "Collection", url: "https://cravenutri.com/collection" },
+          { name: productData.name, url: window.location.href }
+        ]}
+      />
+
       <motion.div
         variants={pageVariants}
         initial="initial"
@@ -154,11 +163,10 @@ const Product = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setMainImage(img.url)}
-                    className={`relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
-                      mainImage === img.url
+                    className={`relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${mainImage === img.url
                         ? "border-emerald-500 shadow-md"
                         : "border-transparent hover:border-gray-300"
-                    }`}
+                      }`}
                   >
                     <img
                       src={img.url}
@@ -228,11 +236,10 @@ const Product = () => {
               whileTap={!isOutOfStock && !adding ? { scale: 0.98 } : {}}
               onClick={handleAddToCart}
               disabled={adding || isOutOfStock}
-              className={`w-full sm:w-auto px-8 py-4 font-semibold rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2 ${
-                isOutOfStock
+              className={`w-full sm:w-auto px-8 py-4 font-semibold rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2 ${isOutOfStock
                   ? "bg-gray-300 text-gray-600 cursor-not-allowed"
                   : "bg-gradient-to-r from-emerald-600 to-teal-500 text-white hover:shadow-xl"
-              }`}
+                }`}
             >
               {adding ? (
                 <>
@@ -408,38 +415,38 @@ const Product = () => {
             productData.netWeight ||
             productData.servingSize ||
             productData.servingsPerContainer) && (
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                Specifications
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700">
-                {productData.flavor && (
-                  <div className="bg-gray-50 p-3 rounded-lg">
-                    <span className="font-medium">Flavor:</span>{" "}
-                    {productData.flavor}
-                  </div>
-                )}
-                {productData.netWeight && (
-                  <div className="bg-gray-50 p-3 rounded-lg">
-                    <span className="font-medium">Net Weight:</span>{" "}
-                    {productData.netWeight}
-                  </div>
-                )}
-                {productData.servingSize && (
-                  <div className="bg-gray-50 p-3 rounded-lg">
-                    <span className="font-medium">Serving Size:</span>{" "}
-                    {productData.servingSize}
-                  </div>
-                )}
-                {productData.servingsPerContainer && (
-                  <div className="bg-gray-50 p-3 rounded-lg">
-                    <span className="font-medium">Servings Per Container:</span>{" "}
-                    {productData.servingsPerContainer}
-                  </div>
-                )}
+              <div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  Specifications
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700">
+                  {productData.flavor && (
+                    <div className="bg-gray-50 p-3 rounded-lg">
+                      <span className="font-medium">Flavor:</span>{" "}
+                      {productData.flavor}
+                    </div>
+                  )}
+                  {productData.netWeight && (
+                    <div className="bg-gray-50 p-3 rounded-lg">
+                      <span className="font-medium">Net Weight:</span>{" "}
+                      {productData.netWeight}
+                    </div>
+                  )}
+                  {productData.servingSize && (
+                    <div className="bg-gray-50 p-3 rounded-lg">
+                      <span className="font-medium">Serving Size:</span>{" "}
+                      {productData.servingSize}
+                    </div>
+                  )}
+                  {productData.servingsPerContainer && (
+                    <div className="bg-gray-50 p-3 rounded-lg">
+                      <span className="font-medium">Servings Per Container:</span>{" "}
+                      {productData.servingsPerContainer}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
           {/* Storage & Shelf Life */}
           {(productData.storageInstructions || productData.shelfLife) && (

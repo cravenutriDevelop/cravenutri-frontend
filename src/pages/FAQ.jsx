@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Title from "../components/Title";
 import SEO from "../components/SEO";
+import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 const faqs = [
   {
@@ -44,6 +45,12 @@ const FAQ = () => {
         description="Find answers to frequently asked questions about CraveNutri products, orders, delivery, and policies."
         url="https://cravenutri.com/faq"
         image="https://cravenutri.com/cravenutriicon.png"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://cravenutri.com/" },
+          { name: "About", url: "https://cravenutri.com/faq" }
+        ]}
       />
       <div className="bg-[#FFFBF7] min-h-screen">
         <div className="max-w-6xl mx-auto px-6 py-16">

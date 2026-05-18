@@ -4,6 +4,7 @@ import { ShopContext } from "../contexts/ShopContext";
 import Title from "../components/Title";
 import ProductItem from "../components/ProductItem";
 import SEO from "../components/SEO";
+import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 const Collection = () => {
   const { products, search, showSearch } = useContext(ShopContext);
@@ -109,6 +110,12 @@ const Collection = () => {
         description="Explore healthy snacks, protein bars, cookies, wellness products, and nutritious foods at CraveNutri."
         url="https://cravenutri.com/collection"
         image="https://cravenutri.com/cravenutriicon.png"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://cravenutri.com/" },
+          { name: "Collection", url: "https://cravenutri.com/collection" }
+        ]}
       />
       <div className="min-h-screen bg-gradient-to-br from-white to-orange-50 py-10 px-4 sm:px-6 lg:px-8 bg-[#FFFBF7]">
         <div className="max-w-7xl mx-auto bg-[#FFFBF7]">

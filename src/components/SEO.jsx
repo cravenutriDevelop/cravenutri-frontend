@@ -74,7 +74,7 @@ const SEO = ({
       </script>
 
       {/* Breadcrumb Schema */}
-      <script type="application/ld+json">
+      {/* <script type="application/ld+json">
         {`
         {
           "@context": "https://schema.org/",
@@ -107,7 +107,7 @@ const SEO = ({
           ]
         }
         `}
-      </script>
+      </script> */}
     </Helmet>
   );
 };
