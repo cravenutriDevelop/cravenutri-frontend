@@ -20,7 +20,7 @@ const SEO = ({
         content="healthy snacks, nutrition snacks, protein snacks, Crave Nutri, wellness foods"
       />
 
-      <meta name="author" content="Crave Nutri" />
+      <meta name="author" content="Cravenutri" />
 
       {/* Canonical */}
       <link rel="canonical" href={url} />
