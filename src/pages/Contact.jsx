@@ -68,7 +68,7 @@ const Contact = () => {
             <div className="flex items-start gap-3">
               <Phone className="text-gray-500 mt-1" size={18} />
               <p>
-                <span className="font-semibold">Phone:</span> +91-123456789
+                <span className="font-semibold">Phone:</span> +91 9654804502
               </p>
             </div>
 
@@ -77,10 +77,10 @@ const Contact = () => {
               <p>
                 <span className="font-semibold">Email:</span>{" "}
                 <a
-                  href="mailto:help@cravenutri.com"
+                  href="mailto:admin@cravenutri.com"
                   className="text-orange-600 hover:underline"
                 >
-                  help@cravenutri.com
+                  admin@cravenutri.com
                 </a>
               </p>
             </div>
@@ -89,7 +89,7 @@ const Contact = () => {
               <MapPin className="text-gray-500 mt-1" size={18} />
               <p>
                 <span className="font-semibold">Registered Address:</span>{" "}
-                123, Health Street, sector18, Noida , Uttar Pradesh , 123456
+                A 86 St No. 20 Som Bazaar,South Gamri extension, Delhi 110053
               </p>
             </div>
 
@@ -97,7 +97,7 @@ const Contact = () => {
               <MapPin className="text-gray-500 mt-1" size={18} />
               <p>
                 <span className="font-semibold">Fulfilment Address:</span>{" "}
-                123, Health Street, sector18, Noida , Uttar Pradesh , 123456
+                A 86 St No. 20 Som Bazaar,South Gamri extension, Delhi 110053
               </p>
             </div>
 

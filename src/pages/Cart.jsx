@@ -68,7 +68,7 @@ const Cart = () => {
         className="border-t pt-14 px-4 sm:px-10 text-center py-20 bg-[#FFFBF7]"
       >
         <img
-          src={assets.empty_cart || "https://via.placeholder.com/200?text=Empty+Cart"}
+          src={assets.placeholder || "https://res.cloudinary.com/ds3pxv56f/image/upload/v1781245736/delete_qxckow.png"}
           alt="Empty cart"
           className="w-40 mx-auto mb-6 opacity-50"
         />
@@ -98,7 +98,7 @@ const Cart = () => {
         <meta name="robots" content="noindex, nofollow" />
       </Helmet> */}
 
-    <div className="border-t pt-14 px-4 sm:px-10 animate-fadeIn">
+    <div className="border-t pt-14 pb-14 px-4 sm:px-10 animate-fadeIn">
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}

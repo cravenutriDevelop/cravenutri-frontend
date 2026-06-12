@@ -1,14 +1,9 @@
 import logoc from "./logoc.png"
 import logo from "./logo.png"
 
-// hero categories
-import cookieHero from "./cookiecravenutri.jpeg"
-import barsHero from "./cravenutribar.jpeg"
-import proteinBarHero from "./maxbarCravenutri.jpeg"
-import drinkHero from "./badamragdacravenutri.jpeg"
+import placeholder from "./placeholder.png"
 
-// additional drink
-import drinkChoco from "./badamragdacravenutrichoco.jpeg"
+// hero categories
 
 // icons
 import cart_icon from "./cart_icon.png"
@@ -30,12 +25,7 @@ export const assets = {
   logoc,
   logo,
 
-  cookieHero,
-  barsHero,
-  proteinBarHero,
-  drinkHero,
-  drinkChoco,
-
+  placeholder,
   cart_icon,
   dropdown_icon,
   exchange_icon,
