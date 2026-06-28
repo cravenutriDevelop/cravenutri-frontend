@@ -8,9 +8,9 @@ export const ShopContext = createContext();
 const ShopContextProvider = ({ children }) => {
   const currency = "₹";
   const deliveryFee = 10;
-  // const backendUrl = 'https://cravenutri-backend-9kd7.onrender.com';
+  const backendUrl = 'https://cravenutri-backend-9kd7.onrender.com';
   // const backendUrl ='https://cravenutri-backend.onrender.com';
-    const backendUrl = "http://10.92.238.239:3000"; 
+    // const backendUrl = "http://10.92.238.239:3000"; 
   
   // const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const [search, setSearch] = useState("");
