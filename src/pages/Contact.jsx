@@ -49,35 +49,21 @@ const Contact = () => {
             </h2>
 
             <div className="space-y-5 text-gray-700">
-
               <div className="flex items-start gap-3">
                 <Building className="text-gray-500 mt-1" size={18} />
                 <p>
-                  <span className="font-semibold">Trade Name:</span> CurveNutri
-                </p>
-              </div>
-
-              {/* <div className="flex items-start gap-3">
-              <Building className="text-gray-500 mt-1" size={18} />
-              <p>
-                <span className="font-semibold">Company:</span>{" "}
-                CURVENUTRI HEALTH proprietorship  LIMITED
-              </p>
-            </div> */}
-              <div className="flex items-start gap-3">
-                <Building className="text-gray-500 mt-1" size={18} />
-
-                <p>
-                  <span className="font-semibold">Business Name:</span>{" "}
-                  CURVENUTRI HEALTH
-                  <span className="text-gray-500"> (Proprietorship Firm)</span>
+                  <span className="font-semibold">Business Name:</span> Crave Nutri
+                  <span className="text-gray-500"> (Proprietorship)</span>
                 </p>
               </div>
 
               <div className="flex items-start gap-3">
                 <Phone className="text-gray-500 mt-1" size={18} />
                 <p>
-                  <span className="font-semibold">Phone:</span> +91 9654804502
+                  <span className="font-semibold">Phone:</span>{" "}
+                  <a href="tel:+919654804502" className="text-orange-600 hover:underline">
+                    +91 9654804502
+                  </a>
                 </p>
               </div>
 
@@ -97,19 +83,11 @@ const Contact = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="text-gray-500 mt-1" size={18} />
                 <p>
-                  <span className="font-semibold">Registered Address:</span>{" "}
-                  A 86 St No. 20 Som Bazaar,South Gamri extension, Delhi 110053
+                  <span className="font-semibold">Business Address:</span>{" "}
+                  Shop No. 01, A-86, Street No. 20, Som Bazaar, North East Delhi,
+                  Delhi – 110053
                 </p>
               </div>
-
-              <div className="flex items-start gap-3">
-                <MapPin className="text-gray-500 mt-1" size={18} />
-                <p>
-                  <span className="font-semibold">Fulfilment Address:</span>{" "}
-                  A 86 St No. 20 Som Bazaar,South Gamri extension, Delhi 110053
-                </p>
-              </div>
-
             </div>
           </motion.div>
 
